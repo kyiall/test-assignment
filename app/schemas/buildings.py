@@ -5,3 +5,7 @@ class BuildingBase(BaseModel):
     address: str
     latitude: float
     longitude: float
+
+
+class BuildingSchema(BaseModel):
+    address: str

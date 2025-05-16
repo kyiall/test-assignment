@@ -10,6 +10,7 @@ router = APIRouter(prefix="/buildings")
 
 @router.post("", response_model=BuildingBase)
 async def add_building(building_data: BuildingBase, db: AsyncSession = Depends(get_db)):
+    """Эндпойнт на создание здания"""
     return await create_building(db, building_data)
 
 

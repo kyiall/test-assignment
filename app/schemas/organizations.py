@@ -2,6 +2,8 @@ from typing import List
 
 from pydantic import BaseModel
 
+from app.schemas.buildings import BuildingSchema
+
 
 class PhoneNumberBase(BaseModel):
     number: str
@@ -10,6 +12,7 @@ class PhoneNumberBase(BaseModel):
 class OrganizationResponse(BaseModel):
     name: str
     phone_number: List[PhoneNumberBase]
+    building: BuildingSchema
 
 
 class OrganizationActivityResponse(BaseModel):
